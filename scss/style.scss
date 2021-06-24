@@ -39,6 +39,7 @@ html, body{
 
 ul {
 	padding-left: 0;
+	list-style: none;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -62,17 +63,23 @@ a, button {
 }
 
 .pricing {
-	padding: 100px 0;
+	padding: 100px 50px;
 	&__col {
-		width: (329 / 1170) * 100%;
+		width: (328 / 1100) * 100%;
 		float: left;
-		padding-left: 15px;
-		padding-right: 15px;
 		background-color: #f5f4f9;
+		margin-right: 15px;
+		padding: 35px 70px;
+		text-align: center;
+
+		&:last-child {
+		margin-right: 0;
+
+		}
 	}
 
 	&__col--center {
-		width: (370 / 1170) * 100%;
+		width: (370 / 1100) * 100%;
 	}
 }
 
@@ -80,9 +87,16 @@ a, button {
 }
 
 .price {
-	&__rate {}
+	&__rate {
+	font-size: 60px;
+	margin-bottom: 20px;
+	}
 
-	&__position {}
+	&__position {
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-bottom: 120px;
+	}
 
 	&__body {}
 }
