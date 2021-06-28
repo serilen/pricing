@@ -1,4 +1,45 @@
-//миксины
+//шрифти
+@font-face {
+    font-family: 'Bebas';
+    font-display: swap;
+    src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Bebas';
+    font-display: swap;
+    src: url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Bebas';
+    font-display: swap;
+    src: url('../fonts/bebasneue_thin-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_thin-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Bebas';
+    font-display: swap;
+    src: url('../fonts/bebasneue_light-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+//міксіни
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
 	content: $content;
 	display: $display;
@@ -11,7 +52,7 @@
 	}
 }
 
-//переменные 
+//змінні
 $color-text-base: #181818;
 $bg-color-active: #ffeecc;
 
@@ -27,9 +68,9 @@ $bg-color-active: #ffeecc;
 //font-family: 'Roboto', sans-serif;
 
 html, body{
-	font-family: 'Raleway', Arial, sans-serif;
-	font-size: 14px;
-	font-weight: 500;
+	font-family: 'Bebas', Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
 	color: $color-text-base;
 	line-height: 1.6;
 	height: 100%;	
@@ -63,43 +104,134 @@ a, button {
 }
 
 .pricing {
-	padding: 100px 50px;
+	padding: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0 -10px;
+
 	&__col {
-		width: (328 / 1100) * 100%;
-		float: left;
-		background-color: #f5f4f9;
-		margin-right: 15px;
-		padding: 35px 70px;
+		position: relative;
+		background-image: linear-gradient(#f5f4f9 36.51%, #fff 36.51%, #fff 89%, #f5f4f9 89%);
+  		background-size: 100% 100%;
+  		background-repeat: no-repeat;
+		width: (329 / 1070) * 100%;
+		padding: 35px 80px 125px;
 		text-align: center;
+		flex: 1 0 250px;
+		margin: 0 10px;
 
-		&:last-child {
-		margin-right: 0;
+		&:after	{
+			@include pseudo;
+			background-color: #fff;
+			border-radius: 50% 50% 0 0;
+			width: 100%;
+			height: 10%;
+			top: 26.51%;
+			left: 0;			
+		}
 
+		&:before {
+			@include pseudo;
+			background-image: url('../image/ui&ux-icon.png');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 33px;
+			height: 33px;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 30%;
+			z-index: 2;
 		}
 	}
 
 	&__col--center {
-		width: (370 / 1100) * 100%;
+		width: (370 / 1070) * 100%;
+		padding: 50px 80px 160px;
+
+		&:before {
+			@include pseudo;
+			background-image: url('../image/webdesignn-icon.png');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 37px;
+			height: 37px;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 30%;
+			z-index: 2;
+		}
+
+		&:after	{
+			height: 11%;
+			top: 25.61%;
+			left: 0;			
+		}
 	}
 }
 
-.row {
-}
 
 .price {
 	&__rate {
-	font-size: 60px;
-	margin-bottom: 20px;
-	}
+		position: relative;
+		font-size: 60px;
+		line-height: 1;
+		font-weight: 100;
+		margin-bottom: 10px;
 
+		&:before,
+		&:after {
+			@include pseudo;
+		}
+
+		&:before {
+			content: '$';
+			font-size: 24px;
+			left: 30%;
+			top: 10%;
+		}
+		&:after {
+			content: '/HR';
+			font-size: 16px;
+			font-weight: 400;
+			right: 28%;
+			bottom: 10%;
+		}
+	}
+	
 	&__position {
-	font-size: 24px;
-	text-transform: uppercase;
-	margin-bottom: 120px;
+		font-size: 24px;
+		line-height: 1.5;
+		text-transform: uppercase;
+		margin-bottom: 120px;
 	}
 
-	&__body {}
+	&__body {
+		font-family: 'Roboto', Arial, sans-serif;
+		line-height: 3.5;
+		text-align: left;
+	}
 }
 
 .button {
+	position: absolute;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	bottom: 0;
+	transform: translate(-50%, 50%);
+	left: 50%;
+	background-color: rgb(111, 207, 251);
+  	box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
+	border-radius: 30px;
+	padding: 14px 21px;
+	width: 203px;
+	z-index: 2;
 }
+
