@@ -1,41 +1,41 @@
 //шрифти
 @font-face {
-    font-family: 'Bebas';
-    font-display: swap;
-    src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
-         url('../fonts/bebasneue_bold-webfont.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+	font-family: 'Bebas';
+	font-display: swap;
+	src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+	url('../fonts/bebasneue_bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'Bebas';
-    font-display: swap;
-    src: url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
-         url('../fonts/bebasneue_regular-webfont.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Bebas';
+	font-display: swap;
+	src: url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+	url('../fonts/bebasneue_regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'Bebas';
-    font-display: swap;
-    src: url('../fonts/bebasneue_thin-webfont.woff2') format('woff2'),
-         url('../fonts/bebasneue_thin-webfont.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
+	font-family: 'Bebas';
+	font-display: swap;
+	src: url('../fonts/bebasneue_thin-webfont.woff2') format('woff2'),
+	url('../fonts/bebasneue_thin-webfont.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'Bebas';
-    font-display: swap;
-    src: url('../fonts/bebasneue_light-webfont.woff2') format('woff2'),
-         url('../fonts/bebasneue_light-webfont.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+	font-family: 'Bebas';
+	font-display: swap;
+	src: url('../fonts/bebasneue_light-webfont.woff2') format('woff2'),
+	url('../fonts/bebasneue_light-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
 
 }
 
@@ -114,8 +114,8 @@ a, button {
 	&__col {
 		position: relative;
 		background-image: linear-gradient(#f5f4f9 36.51%, #fff 36.51%, #fff 89%, #f5f4f9 89%);
-  		background-size: 100% 100%;
-  		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
 		width: (329 / 1070) * 100%;
 		padding: 35px 80px 125px;
 		text-align: center;
@@ -137,9 +137,9 @@ a, button {
 			background-image: url('../image/ui&ux-icon.png');
 			background-position: center center;
 			background-repeat: no-repeat;
-			background-size: cover;
+			background-size: contain;
 			width: 33px;
-			height: 33px;
+			height: 37px;
 			left: 50%;
 			transform: translateX(-50%);
 			top: 30%;
@@ -154,15 +154,7 @@ a, button {
 		&:before {
 			@include pseudo;
 			background-image: url('../image/webdesignn-icon.png');
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: cover;
 			width: 37px;
-			height: 37px;
-			left: 50%;
-			transform: translateX(-50%);
-			top: 30%;
-			z-index: 2;
 		}
 
 		&:after	{
@@ -170,6 +162,11 @@ a, button {
 			top: 25.61%;
 			left: 0;			
 		}
+	}
+
+	&__col--right:before {
+		background-image: url('../image/web-development-icon.png');
+		height: 37px;
 	}
 }
 
@@ -217,6 +214,7 @@ a, button {
 }
 
 .button {
+	display: block;
 	position: absolute;
 	font-size: 18px;
 	font-weight: 700;
@@ -228,10 +226,17 @@ a, button {
 	transform: translate(-50%, 50%);
 	left: 50%;
 	background-color: rgb(111, 207, 251);
-  	box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
+	box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
 	border-radius: 30px;
 	padding: 14px 21px;
 	width: 203px;
 	z-index: 2;
+
+	&--center {
+		background-color: rgb(253, 141, 123);
+		box-shadow: 2.424px 4.373px 18px 0px rgba(253, 141, 123, 0.31);
+		bottom: 11%;
+		
+	}
 }
 

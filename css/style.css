@@ -111,9 +111,9 @@ a, button {
       background-image: url("../image/ui&ux-icon.png");
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       width: 33px;
-      height: 33px;
+      height: 37px;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -128,21 +128,14 @@ a, button {
       display: block;
       position: absolute;
       background-image: url("../image/webdesignn-icon.png");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 37px;
-      height: 37px;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
-      top: 30%;
-      z-index: 2; }
+      width: 37px; }
     .pricing__col--center:after {
       height: 11%;
       top: 25.61%;
       left: 0; }
+  .pricing__col--right:before {
+    background-image: url("../image/web-development-icon.png");
+    height: 37px; }
 
 .price__rate {
   position: relative;
@@ -178,6 +171,7 @@ a, button {
   text-align: left; }
 
 .button {
+  display: block;
   position: absolute;
   font-size: 18px;
   font-weight: 700;
@@ -197,3 +191,8 @@ a, button {
   padding: 14px 21px;
   width: 203px;
   z-index: 2; }
+  .button--center {
+    background-color: #fd8d7b;
+    -webkit-box-shadow: 2.424px 4.373px 18px 0px rgba(253, 141, 123, 0.31);
+    box-shadow: 2.424px 4.373px 18px 0px rgba(253, 141, 123, 0.31);
+    bottom: 11%; }
