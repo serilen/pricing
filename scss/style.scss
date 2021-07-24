@@ -172,6 +172,10 @@ a, button {
 
 
 .price {
+	&__header {
+		position: relative;
+	}
+
 	&__rate {
 		position: relative;
 		font-size: 60px;
@@ -226,6 +230,19 @@ a, button {
 		text-align: left;
 		z-index: 3;
 	}
+
+	&__bubble {
+		position: absolute;
+		top: -32px;
+		right: -64px;
+	}
+
+	&__tooltip {
+		position: absolute;
+		top: -30px;
+		right: -182px;
+		z-index: 5;
+	}
 }
 
 .button {
@@ -279,6 +296,79 @@ a, button {
 	}
 }
 
+.tooltip {
+	display: block;
+	min-width: 100px;
+	padding: 7px 25px;
+	font-size: 16px;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #3b4040;
+	border: 1px solid #3b4040;
+	border-radius: 20px;
+	visibility: hidden;
+	opacity: 0.2;
+
+	&:before {
+		content: " ";
+		display: block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 6.5px 5px 6.5px 0;
+		border-color: transparent #3b4040 transparent transparent;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: -4px;
+	}
+}
+
+.bubble {
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-color: #fd8d7b;
+	border-radius: 50%;
+	font-size: 24px;
+	color: #fff;
+	text-align: center;
+	line-height: 46px;
+	outline: none;
+
+	&:focus + .tooltip, &:hover + .tooltip{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		width: 12px;
+		height: 12px;
+		background-color: #fd8d7b;
+		border-radius: 50%;
+		position: absolute;
+		top: -5px;
+		right: -7px;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		width: 4px;
+		height: 4px;
+		background-color: #fd8d7b;
+		border-radius: 50%;
+		position: absolute;
+		top: -9px;
+		right: -11px;
+	}
+}
+
+
+/*
 .tooltip {
 	float: right;
 	position: relative;
@@ -365,3 +455,4 @@ a, button {
 	}
 	
 }
+*/
