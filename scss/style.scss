@@ -102,7 +102,7 @@ a, button {
 	@include push--auto;
 	padding: 0 15px;
 }
-/*
+
 .pricing {
 	padding: 160px 50px 145px;
 	display: flex;
@@ -112,10 +112,109 @@ a, button {
 	margin: 0 -10px;
 
 	&__col {
-		position: relative;
 		background-color: #f5f4f9;
 		width: (327 / 1090) *100%;
-		padding: 35px 20px 125px;
+	}
+	&__col--center {
+		width: (370 / 1090) *100%;
+	}
+}
+.price {
+	position: relative;
+	padding: 35px 20px 125px;
+	&__header {}
+	&__rate {}
+	&__position {}
+	&__body {}
+	&__img {}
+
+	&__footer {
+		font-weight: 300;
+		font-family: 'Roboto', Arial, sans-serif;
+		color: #a9a9a9;
+	}
+
+	&__bubble {}
+	&__tooltip {}
+	&__rate--center {}
+	&__position--center {}
+}
+.button {
+	display: inline-block;
+	position: absolute;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	bottom: 0;
+	transform: translate(-50%, 50%);
+	left: 50%;
+	background-color: rgb(111, 207, 251);
+	box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
+	border-radius: 30px;
+	border: 1px solid transparent;
+	padding: 14px 21px;
+	width: 203px;
+
+	&:focus {
+		border-color: #000;
+	}
+
+	&:hover {
+		background-color: #fff;
+		color: rgb(111, 207, 251);
+		border-color: rgb(111, 207, 251);
+	}
+
+	&:active {
+		background-color: $bg-color-active;
+	}
+
+	&--center {
+		background-color: rgb(253, 141, 123);
+		box-shadow: 2.424px 4.373px 18px 0px rgba(253, 141, 123, 0.31);
+		bottom: 10%;
+
+		&:hover {
+			background-color: #fff;
+			color: rgb(253, 141, 123);
+			border-color: rgb(253, 141,123);
+		}
+		
+		&:active {
+			background-color: $bg-color-active;
+		}
+	}
+}
+
+
+.bubble {
+	position: absolute;
+	top: -30px;
+	right: -65px;
+}
+.tooltip {
+	position: absolute;
+	top: -22px;
+	right: -174px;
+}
+
+
+
+
+
+
+
+
+
+/*
+.pricing {
+	
+
+	&__col {
+		
 		text-align: center;
 		margin: 0 10px;
 		display: flex;
@@ -131,23 +230,11 @@ a, button {
 			z-index: 1;			
 		}
 
-		&:before {
-			@include pseudo;
-			background-image: url('../image/ui&ux-icon.png');
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 33px;
-			height: 37px;
-			left: 50%;
-			transform: translateX(-50%);
-			top: 30%;
-			z-index: 2;
-		}
+		
 	}
 
 	&__col--center {
-		width: (370 / 1090) *100%;
+		
 		padding: 45px 20px 150px;
 
 		&:before {
@@ -238,75 +325,21 @@ a, button {
 	}
 
 	&__bubble {
-		position: absolute;
-		top: -30px;
-		right: -65px;
+		
 	}
 
 	&__tooltip {
-		position: absolute;
-		top: -22px;
-		right: -174px;
+		
 		z-index: 5;
 	}
 
 	&__footer {
-		font-weight: 300;
-		font-family: 'Roboto', Arial, sans-serif;
-		color: #a9a9a9;
+		
 	}
 }
 
 .button {
-	display: block;
-	position: absolute;
-	font-size: 18px;
-	font-weight: 700;
-	letter-spacing: 0.2em;
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	bottom: 0;
-	transform: translate(-50%, 50%);
-	left: 50%;
-	background-color: rgb(111, 207, 251);
-	box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
-	border-radius: 30px;
-	border: 1px solid transparent;
-	padding: 14px 21px;
-	width: 203px;
-	z-index: 2;
-
-	&:focus {
-		border-color: #000;
-	}
-
-	&:hover {
-		background-color: #fff;
-		color: rgb(111, 207, 251);
-		border-color: rgb(111, 207, 251);
-	}
-
-	&:active {
-		background-color: $bg-color-active;
-	}
-
-	&--center {
-		background-color: rgb(253, 141, 123);
-		box-shadow: 2.424px 4.373px 18px 0px rgba(253, 141, 123, 0.31);
-		bottom: 10%;
-
-		&:hover {
-			background-color: #fff;
-			color: rgb(253, 141, 123);
-			border-color: rgb(253, 141,123);
-		}
-		
-		&:active {
-			background-color: $bg-color-active;
-		}
-	}
-}
+	
 
 .tooltip {
 	display: block;
