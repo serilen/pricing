@@ -1,6 +1,6 @@
 //шрифти
 @font-face {
-	font-family: 'Bebas';
+	font-family: 'Bebasneue';
 	font-display: swap;
 	src: url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
 	url('../fonts/bebasneue_bold-webfont.woff') format('woff');
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-	font-family: 'Bebas';
+	font-family: 'Bebasneue';
 	font-display: swap;
 	src: url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
 	url('../fonts/bebasneue_regular-webfont.woff') format('woff');
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-	font-family: 'Bebas';
+	font-family: 'Bebasneue';
 	font-display: swap;
 	src: url('../fonts/bebasneue_thin-webfont.woff2') format('woff2'),
 	url('../fonts/bebasneue_thin-webfont.woff') format('woff');
@@ -30,7 +30,7 @@
 }
 
 @font-face {
-	font-family: 'Bebas';
+	font-family: 'Bebasneue';
 	font-display: swap;
 	src: url('../fonts/bebasneue_light-webfont.woff2') format('woff2'),
 	url('../fonts/bebasneue_light-webfont.woff') format('woff');
@@ -68,7 +68,7 @@ $bg-color-active: #ffeecc;
 //font-family: 'Roboto', sans-serif;
 
 html, body{
-	font-family: 'Bebas', Arial, sans-serif;
+	font-family: 'Bebasneue', Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	color: $color-text-base;
@@ -119,16 +119,12 @@ a, button {
 	}
 }
 .price {
+	box-shadow: 2.424px 4.373px 59px 0px rgba(122, 107, 231, 0.004);
 	background-color: #f5f4f9;
-	min-height: 610px;
 	position: relative;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-
-	&--center {
-		min-height: 680px;
-	}
 
 	&__header {
 		padding: 35px 20px 30px;
@@ -139,6 +135,7 @@ a, button {
 	}
 
 	&__rate {
+		display: inline-block;
 		position: relative;
 		font-size: 60px;
 		line-height: 1;
@@ -154,24 +151,17 @@ a, button {
 		&:before {
 			content: '$';
 			font-size: 24px;
-			left: 38%;
-			top: 10%;
+			left: 0;
+			top: 0;
+			transform: translate(-100%, 25%);
 		}
 		&:after {
 			content: '/HR';
 			font-size: 16px;
 			font-weight: 400;
-			right: 36%;
-			bottom: 10%;
-		}
-
-		&--center:before {
-			left: 41%;
-			top: 9%;
-		}
-		&--center:after {
-			right: 37%;
-			bottom: 9%;
+			right: 0;
+			bottom: 0;
+			transform: translate(100%, -25%);
 		}
 	}
 
@@ -188,7 +178,7 @@ a, button {
 	}
 
 	&__body {
-		padding: 0 20px;
+		padding: 0 20px 55px;
 		font-family: 'Roboto', Arial, sans-serif;
 		font-weight: 300;
 		line-height: 3;
@@ -197,14 +187,19 @@ a, button {
 		border-radius: 300px 300px 0 0 / 150px 150px 0 0;
 		width: 100%;
 		flex: 1 0 auto;
+
+		&--center {
+			padding-bottom: 75px;
+		}
 	}
 
 	&__img {
-		margin-bottom: 20px;
+		display: block;
+		margin: 0 auto 20px;
 	}
 
 	&__list {
-		margin-left: 70px;
+		display: inline-block;
 		text-align: left;
 	}
 
@@ -212,6 +207,12 @@ a, button {
 		padding: 0 20px;
 		flex: 0 0 auto;
 		min-height: 60px;
+		display: flex;
+
+		&--center {
+			padding-top: 40px;
+			padding-bottom: 20px;
+		}
 	}
 
 	&__footer-text {
@@ -219,7 +220,7 @@ a, button {
 		font-family: 'Roboto', Arial, sans-serif;
 		color: #a9a9a9;
 		font-size: 11px;
-		padding: 30px 20px;
+		margin: auto;
 	}
 
 	&__bubble {
@@ -241,7 +242,7 @@ a, button {
 	display: inline-block;
 	position: absolute;
 	font-size: 18px;
-	font-weight: 700;
+	font-weight: 400;
 	letter-spacing: 0.2em;
 	color: #fff;
 	text-decoration: none;

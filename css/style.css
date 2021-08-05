@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'Bebas';
+  font-family: 'Bebasneue';
   font-display: swap;
   src: url("../fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("../fonts/bebasneue_bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Bebas';
+  font-family: 'Bebasneue';
   font-display: swap;
   src: url("../fonts/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebasneue_regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Bebas';
+  font-family: 'Bebasneue';
   font-display: swap;
   src: url("../fonts/bebasneue_thin-webfont.woff2") format("woff2"), url("../fonts/bebasneue_thin-webfont.woff") format("woff");
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Bebas';
+  font-family: 'Bebasneue';
   font-display: swap;
   src: url("../fonts/bebasneue_light-webfont.woff2") format("woff2"), url("../fonts/bebasneue_light-webfont.woff") format("woff");
   font-weight: 300;
@@ -35,7 +35,7 @@
   transition: all .1s ease-in; }
 
 html, body {
-  font-family: 'Bebas', Arial, sans-serif;
+  font-family: 'Bebasneue', Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #181818;
@@ -85,8 +85,9 @@ a, button {
     width: 33.94495%; }
 
 .price {
+  -webkit-box-shadow: 2.424px 4.373px 59px 0px rgba(122, 107, 231, 0.004);
+  box-shadow: 2.424px 4.373px 59px 0px rgba(122, 107, 231, 0.004);
   background-color: #f5f4f9;
-  min-height: 610px;
   position: relative;
   text-align: center;
   display: -webkit-box;
@@ -96,13 +97,12 @@ a, button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  .price--center {
-    min-height: 680px; }
   .price__header {
     padding: 35px 20px 30px; }
     .price__header--center {
       padding: 50px 20px 40px; }
   .price__rate {
+    display: inline-block;
     position: relative;
     font-size: 60px;
     line-height: 1;
@@ -115,20 +115,20 @@ a, button {
     .price__rate:before {
       content: '$';
       font-size: 24px;
-      left: 38%;
-      top: 10%; }
+      left: 0;
+      top: 0;
+      -webkit-transform: translate(-100%, 25%);
+      -ms-transform: translate(-100%, 25%);
+      transform: translate(-100%, 25%); }
     .price__rate:after {
       content: '/HR';
       font-size: 16px;
       font-weight: 400;
-      right: 36%;
-      bottom: 10%; }
-    .price__rate--center:before {
-      left: 41%;
-      top: 9%; }
-    .price__rate--center:after {
-      right: 37%;
-      bottom: 9%; }
+      right: 0;
+      bottom: 0;
+      -webkit-transform: translate(100%, -25%);
+      -ms-transform: translate(100%, -25%);
+      transform: translate(100%, -25%); }
   .price__position {
     font-size: 24px;
     font-weight: 400;
@@ -138,7 +138,7 @@ a, button {
     .price__position--center {
       letter-spacing: 0.08em; }
   .price__body {
-    padding: 0 20px;
+    padding: 0 20px 55px;
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 300;
     line-height: 3;
@@ -149,23 +149,32 @@ a, button {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; }
+    .price__body--center {
+      padding-bottom: 75px; }
   .price__img {
-    margin-bottom: 20px; }
+    display: block;
+    margin: 0 auto 20px; }
   .price__list {
-    margin-left: 70px;
+    display: inline-block;
     text-align: left; }
   .price__footer {
     padding: 0 20px;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    min-height: 60px; }
+    min-height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .price__footer--center {
+      padding-top: 40px;
+      padding-bottom: 20px; }
   .price__footer-text {
     font-weight: 300;
     font-family: 'Roboto', Arial, sans-serif;
     color: #a9a9a9;
     font-size: 11px;
-    padding: 30px 20px; }
+    margin: auto; }
   .price__bubble {
     position: absolute;
     top: 0;
@@ -186,7 +195,7 @@ a, button {
   display: inline-block;
   position: absolute;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.2em;
   color: #fff;
   text-decoration: none;
