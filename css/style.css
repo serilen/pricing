@@ -51,7 +51,7 @@ ul {
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0; }
 
-a, button {
+a, btn {
   outline: none; }
 
 .img-responsive {
@@ -81,7 +81,7 @@ a, button {
   margin: 0 -10px; }
   .pricing__col {
     width: 30%; }
-  .pricing__col--center {
+  .pricing__col--big {
     width: 33.94495%; }
 
 .price {
@@ -99,7 +99,7 @@ a, button {
   flex-direction: column; }
   .price__header {
     padding: 35px 20px 30px; }
-    .price__header--center {
+    .price__header--big {
       padding: 50px 20px 40px; }
   .price__rate {
     display: inline-block;
@@ -107,49 +107,44 @@ a, button {
     font-size: 60px;
     line-height: 1;
     font-weight: 100;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    letter-spacing: 0.08em; }
     .price__rate:before, .price__rate:after {
       content: "";
       display: block;
-      position: absolute; }
+      position: absolute;
+      letter-spacing: normal; }
     .price__rate:before {
       content: '$';
       font-size: 24px;
-      left: 0;
-      top: 0;
-      -webkit-transform: translate(-100%, 25%);
-      -ms-transform: translate(-100%, 25%);
-      transform: translate(-100%, 25%); }
+      left: -10px;
+      top: 5px; }
     .price__rate:after {
       content: '/HR';
       font-size: 16px;
-      font-weight: 400;
-      right: 0;
-      bottom: 0;
-      -webkit-transform: translate(100%, -25%);
-      -ms-transform: translate(100%, -25%);
-      transform: translate(100%, -25%); }
+      font-weight: 300;
+      right: -12px;
+      bottom: 6px; }
   .price__position {
     font-size: 24px;
     font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 0.04em; }
-    .price__position--center {
+    .price__position--big {
       letter-spacing: 0.08em; }
   .price__body {
-    padding: 0 20px 55px;
+    padding: 35px 20px 55px;
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 300;
     line-height: 3;
-    padding-top: 35px;
     background-color: #fff;
     border-radius: 300px 300px 0 0 / 150px 150px 0 0;
     width: 100%;
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto; }
-    .price__body--center {
+    .price__body--big {
       padding-bottom: 75px; }
   .price__img {
     display: block;
@@ -165,8 +160,9 @@ a, button {
     min-height: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-    .price__footer--center {
+    display: flex;
+    position: relative; }
+    .price__footer--big {
       padding-top: 40px;
       padding-bottom: 20px; }
   .price__footer-text {
@@ -177,59 +173,76 @@ a, button {
     margin: auto; }
   .price__bubble {
     position: absolute;
-    top: 0;
-    right: 0;
-    -webkit-transform: translate(-25%, 25%);
-    -ms-transform: translate(-25%, 25%);
-    transform: translate(-25%, 25%); }
+    top: -3px;
+    right: -1px;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); }
   .price__tooltip {
     position: absolute;
-    top: 0;
-    right: -3px;
-    -webkit-transform: translate(100%, 50%);
-    -ms-transform: translate(100%, 50%);
-    transform: translate(100%, 50%);
+    top: -10px;
+    right: 10px;
+    -webkit-transform: translate(100%, 100%);
+    -ms-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
     z-index: 2; }
+  .price__btn {
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    left: 50%; }
 
-.button {
+.btn {
   display: inline-block;
-  position: absolute;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  bottom: 0;
-  -webkit-transform: translate(-50%, 50%);
-  -ms-transform: translate(-50%, 50%);
-  transform: translate(-50%, 50%);
-  left: 50%;
-  background-color: #6fcffb;
-  -webkit-box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
-  box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
-  border-radius: 30px;
-  border: 1px solid transparent;
-  padding: 14px 21px;
-  min-width: 203px; }
-  .button:focus {
-    border-color: #000; }
-  .button:hover {
-    background-color: #fff;
-    color: #6fcffb;
-    border-color: #6fcffb; }
-  .button:active {
-    background-color: #ffeecc; }
-  .button--center {
+  font-weight: 700;
+  color: #242d2e;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: .75rem 1rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: 8px;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+  .btn--primary {
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #6fcffb;
+    -webkit-box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
+    box-shadow: 2.424px 4.373px 18px 0px rgba(133, 192, 247, 0.31);
+    border-radius: 30px;
+    border: 1px solid transparent;
+    min-width: 203px; }
+    .btn--primary:focus {
+      border-color: #000; }
+    .btn--primary:hover {
+      background-color: #fff;
+      color: #6fcffb;
+      border-color: #6fcffb; }
+    .btn--primary:active {
+      background-color: #ffeecc; }
+  .btn--big {
     background-color: #fd8d7b;
     -webkit-box-shadow: 2.424px 4.373px 18px 0px rgba(253, 141, 123, 0.31);
     box-shadow: 2.424px 4.373px 18px 0px rgba(253, 141, 123, 0.31);
-    bottom: 12%; }
-    .button--center:hover {
-      background-color: #fff;
+    bottom: 100%; }
+    .btn--big:hover {
       color: #fd8d7b;
       border-color: #fd8d7b; }
-    .button--center:active {
+    .btn--big:active {
       background-color: #ffeecc; }
 
 .bubble {
@@ -242,10 +255,14 @@ a, button {
   color: #fff;
   text-align: center;
   line-height: 46px;
-  outline: none; }
+  outline: none;
+  font-weight: 400; }
   .bubble:focus + .tooltip, .bubble:hover + .tooltip {
     visibility: visible;
     opacity: 1; }
+    .bubble:focus + .tooltip:before, .bubble:hover + .tooltip:before {
+      visibility: visible;
+      opacity: 1; }
   .bubble:before {
     content: "";
     display: block;
@@ -279,7 +296,9 @@ a, button {
   border: 1px solid #3b4040;
   border-radius: 20px;
   visibility: hidden;
-  opacity: 0.2; }
+  opacity: 0.2;
+  font-weight: 400;
+  letter-spacing: 0.08em; }
   .tooltip:before {
     content: " ";
     display: block;
@@ -293,102 +312,6 @@ a, button {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    left: -4px; }
-
-/*
-.pricing {
-	
-
-	&__col {
-		
-		text-align: center;
-		margin: 0 10px;
-		display: flex;
-
-		&:after	{
-			@include pseudo;
-			background-color: #fff;
-			border-radius: 300px 300px 0 0 / 150px 150px 0 0;
-			width: 100%;
-			height: (400 / 610) * 100%;
-			top: 25%;
-			left: 0;
-			z-index: 1;			
-		}
-
-		
-	}
-
-	&__col--center {
-		
-		padding: 45px 20px 150px;
-
-		&:before {
-			@include pseudo;
-			background-image: url('../image/webdesignn-icon.png');
-			width: 37px;
-		}
-
-		&:after	{
-			height: (440 / 685) * 100%;
-			top: 25.61%;
-			left: 0;			
-		}
-	}
-
-	&__col--right:before {
-		background-image: url('../image/web-development-icon.png');
-		height: 37px;
-	}
-}
-
-
-.price {
-	margin: auto;
-
-	&__header {
-		position: relative;
-		letter-spacing: 0.08em;
-	}
-
-	&__rate {
-		
-	}
-	
-	&__position {
-		
-	}
-
-	&__body {
-		position: relative;
-		
-		z-index: 2;
-	}
-
-	&__bubble {
-		
-	}
-
-	&__tooltip {
-		
-		z-index: 5;
-	}
-
-	&__footer {
-		
-	}
-}
-
-.button {
-	
-
-.tooltip {
-	
-}
-
-.bubble {
-	
-	}
-}
-
-*/
+    left: -4px;
+    visibility: hidden;
+    opacity: 0.2; }
